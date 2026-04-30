@@ -1,29 +1,30 @@
 import React from 'react'
-import Hero from '../components/Hero'
 import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+import Hero from '../components/Hero'
+import Stats from '../components/Stats'
 import Services from '../components/Services'
-import Testimonials from '../components/Testimonials'
+import About from '../components/About'
 import Gallery from '../components/Gallery'
+import Testimonials from '../components/Testimonials'
 import ContactForm from '../components/ContactForm'
+import Footer from '../components/Footer'
+import WhatsAppFab from '../components/WhatsAppFab'
 
-export default function App(){
+export default function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white">
       <Navbar />
       <main className="flex-1">
         <Hero />
+        <Stats />
         <Services />
-        <Testimonials />
+        <About />
         <Gallery />
-        <section className="py-16 bg-gray-50">
-          <div className="container">
-            <h2 className="text-2xl font-bold mb-6">Fale conosco</h2>
-            <ContactForm />
-          </div>
-        </section>
+        <Testimonials />
+        <ContactForm />
       </main>
       <Footer />
+      <WhatsAppFab />
     </div>
   )
 }

@@ -1,9 +1,16 @@
 import React from 'react'
 
-type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & { variant?: 'primary' | 'ghost' }
+type Variant = 'primary' | 'ghost' | 'outline'
+type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & { variant?: Variant }
 
-export default function Button({ variant = 'primary', children, ...rest }: Props){
-  const base = 'px-5 py-2 rounded-md font-medium'
-  const cls = variant === 'primary' ? `${base} bg-primary-500 text-white` : `${base} bg-transparent border`
-  return <button className={cls} {...rest}>{children}</button>
+export default function Button({ variant = 'primary', className = '', children, ...rest }: Props) {
+  const cls =
+    variant === 'primary' ? 'btn-primary' :
+    variant === 'ghost'   ? 'btn-ghost'   :
+                            'btn-outline'
+  return (
+    <button className={`${cls} ${className}`} {...rest}>
+      {children}
+    </button>
+  )
 }
