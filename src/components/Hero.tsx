@@ -9,9 +9,11 @@ export default function Hero(){
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
             <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900">Maluzin — Materiais de construção</h1>
-            <p className="mt-4 text-lg text-gray-600 max-w-xl">Fornecemos materiais de construção com qualidade, entrega rápida e suporte técnico para obras residenciais e comerciais.</p>
+            <p className="mt-4 text-lg text-gray-600 max-w-xl">Tudo para construir, reformar e decorar. Entrega rápida e suporte técnico para sua obra. Ligue/WhatsApp: <strong>+55 21 97969-8116</strong>.</p>
             <div className="mt-6 flex gap-3">
-              <Button>Solicitar Orçamento</Button>
+              <a href="https://api.whatsapp.com/send?phone=5521979698116&text=Ol%C3%A1%20Maluzin%2C%20gostaria%20de%20um%20or%C3%A7amento" target="_blank" rel="noreferrer">
+                <Button>Chamar no WhatsApp</Button>
+              </a>
               <Button variant="ghost">Ver Catálogo</Button>
             </div>
           </div>
